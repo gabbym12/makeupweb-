@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>GlamLab Studio - Makeup</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="brand">💄 GlamLab Studio</a>
+    <div class="nav-links">
+      <a href="index.html" style="color:var(--accent)">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="game.html">Game</a>
+      <span id="authSlot"></span>
+    </div>
+  </nav>
+
+<main>
+  <div class="hero">
+    <h1>💄 Welcome to GlamLab Studio</h1>
+    <p class="sub">Your makeup destination: browse the product catalog, meet our expert panel, and create avatar makeovers in the GlamLab game!</p>
+    <a class="btn" href="catalog.html">Browse Catalog</a>
+    <a class="btn secondary" href="game.html" style="margin-left:8px">Play the Game</a>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>🛍️ Product Catalog</h3>
+      <p class="sub">Explore the makeup collection with live search.</p>
+      <a class="btn secondary" href="catalog.html">Open Catalog</a>
+    </div>
+    <div class="card">
+      <h3>🎨 GlamLab Game</h3>
+      <p class="sub">Customize an avatar, apply digital cosmetics, complete styling prompts, and save your makeover portfolio.</p>
+      <a class="btn secondary" href="game.html">Play Now</a>
+    </div>
+    <div class="card">
+      <h3>🎓 Expert Panel</h3>
+      <p class="sub">Learn from five specialists in cosmetic chemistry, SFX, runway, HD camera prep, and stage FX.</p>
+    </div>
+  </div>
+</main>
+<script src="auth.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>

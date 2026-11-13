@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product Catalog - GlamLab Studio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="brand">💄 GlamLab Studio</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="catalog.html" style="color:var(--accent)">Catalog</a>
+      <a href="game.html">Game</a>
+      <span id="authSlot"></span>
+    </div>
+  </nav>
+
+<main>
+  <h1>🛍️ Product Catalog</h1>
+  <p class="sub">Browse the full GlamLab makeup collection. Search products by keyword!</p>
+  <div class="toolbar">
+    <input type="text" id="searchBar" placeholder="🔎 Search products... (try: lipstick, GlamCo, eyes, glow)" oninput="onSearch()" />
+    <span id="resultCount" class="sub"></span>
+  </div>
+  <div id="pgrid" class="pgrid"></div>
+</main>
+<script src="auth.js"></script>
+<script src="catalog.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>
