@@ -1,0 +1,60 @@
+/* GlamLab Studio - shared styles */
+:root {
+  --bg: #1d1029; --panel: #2c1a3f; --panel2: #3a2352; --border: #4d2f6b;
+  --text: #f5ecf9; --muted: #b9a3c9; --accent: #ff5fa2; --accent2: #c084fc; --gold: #ffd76e;
+}
+body.light {
+  --bg: #fdf4fa; --panel: #ffffff; --panel2: #f7e8f4; --border: #e3c9ee;
+  --text: #2c1a3f; --muted: #7a5b93; --accent: #d63384; --accent2: #8e2de2;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+a { color: var(--accent2); }
+.nav { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px;
+  background: var(--panel); border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 8px; }
+.nav .brand { font-weight: 800; font-size: 18px; text-decoration: none;
+  background: linear-gradient(90deg,#ff5fa2,#c084fc); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.nav .nav-links { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.nav .nav-links a { color: var(--text); text-decoration: none; font-size: 14px; }
+.nav .nav-links a:hover { color: var(--accent); }
+.nav .userchip { font-size: 12px; color: var(--muted); }
+.nav .userchip b { color: var(--gold); }
+main { max-width: 960px; margin: 0 auto; padding: 24px 16px; }
+h1 { font-size: 28px; margin-bottom: 8px;
+  background: linear-gradient(90deg,#ff5fa2,#c084fc); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.sub { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+.btn { display: inline-block; background: linear-gradient(90deg,#ff5fa2,#c084fc); color: #fff; border: none;
+  border-radius: 10px; padding: 10px 18px; font-weight: 700; cursor: pointer; font-size: 14px; text-decoration: none; }
+.btn.secondary { background: var(--panel2); color: var(--text); border: 1px solid var(--border); }
+.hero { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 32px; text-align: center; margin-bottom: 24px; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill,minmax(220px,1fr)); gap: 14px; }
+.card { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+.card h3 { margin-bottom: 6px; }
+/* login */
+.login-wrap { max-width: 400px; margin: 48px auto; }
+.login-card { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 28px; }
+.login-card h1 { text-align: center; }
+.tabs { display: flex; gap: 8px; margin-bottom: 18px; }
+.tabs button { flex: 1; background: var(--panel2); color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 9px; font-weight: 700; cursor: pointer; font-size: 13px; }
+.tabs button.active { background: linear-gradient(90deg,#ff5fa2,#c084fc); color: #fff; border: none; }
+.field { margin-bottom: 12px; }
+.field label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+.field input { width: 100%; background: var(--panel2); color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 10px 12px; font-size: 14px; }
+.field input:focus { outline: 1px solid var(--accent2); }
+.login-card .btn { width: 100%; margin-top: 6px; }
+#authMsg { min-height: 18px; font-size: 12px; margin-top: 10px; text-align: center; }
+#authMsg.err { color: #f87171; }
+#authMsg.ok { color: #4ade80; }
+.note { font-size: 11px; color: var(--muted); margin-top: 14px; text-align: center; }
+/* catalog */
+.toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 18px; }
+.toolbar input, .toolbar select { background: var(--panel2); color: var(--text); border: 1px solid var(--border);
+  border-radius: 8px; padding: 9px 12px; font-size: 14px; }
+.pgrid { display: grid; grid-template-columns: repeat(auto-fill,minmax(210px,1fr)); gap: 14px; }
+.pcard { background: var(--panel); border: 1px solid var(--border); border-radius: 14px; padding: 14px; text-align: center; }
+.pcard .emoji { font-size: 34px; }
+.pcard .cat { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+.pcard .brand { font-size: 12px; color: var(--accent2); }
+.pcard .price { color: var(--gold); font-weight: 700; }

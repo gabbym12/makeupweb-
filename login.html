@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log In - GlamLab Studio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<main>
+  <div class="login-wrap">
+    <div class="login-card">
+      <h1>💄 GlamLab Studio</h1>
+      <p class="sub" style="text-align:center">Log in to enter the studio and play!</p>
+      <div class="tabs">
+        <button id="tabLogin" class="active" onclick="setTab('login')">Log In</button>
+        <button id="tabSignup" onclick="setTab('signup')">Sign Up</button>
+      </div>
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" type="text" placeholder="e.g. glamqueen" autocomplete="username" />
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" type="password" placeholder="••••••••" autocomplete="current-password" />
+      </div>
+      <button class="btn" id="submitBtn" onclick="submitAuth()">Enter ✨</button>
+      <div id="authMsg"></div>
+      <p class="note">Accounts are saved in your browser only (localStorage).</p>
+    </div>
+  </div>
+</main>
+<script src="auth.js"></script>
+<script>
+let mode = 'login';
+function setTab(m) {
+  mode = m;
+  document.getElementById('tabLogin').className = m === 'login' ? 'active' : '';
+  document.getElementById('tabSignup').className = m === 'signup' ? 'active' : '';
+  document.getElementById('submitBtn').textContent = m === 'login' ? 'Enter ✨' : 'Create Account ✨';
+  msg('');
+}
+function msg(text, cls) {
+  const el = document.getElementById('authMsg');
+  el.textContent = text; el.className = cls || '';
+}
+function submitAuth() {
+  const u = document.getElementById('username').value;
+  const p = document.getElementById('password').value;
+  const res = mode === 'login' ? login(u, p) : signup(u, p);
+  if (res.ok) {
+    msg('Welcome, ' + u.trim() + '! 💖', 'ok');
+    const next = new URLSearchParams(location.search).get('next');
+    setTimeout(function () { window.location.href = next || 'index.html'; }, 500);
+  } else {
+    msg(res.msg, 'err');
+  }
+}
+document.getElementById('password').addEventListener('keydown', function (e) { if (e.key === 'Enter') submitAuth(); });
+// Already logged in? Skip the login page.
+if (currentUser()) window.location.href = 'index.html';
+</script>
+</body>
+</html>
