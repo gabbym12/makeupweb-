@@ -1,15 +1,17 @@
 # makeupweb-
 
-💄 **GlamLab Studio** - a makeup website with a product catalog and an avatar makeover game, gated behind a login page.
+💄 **GlamLab Studio** - a makeup website with a product catalog and makeup games, gated behind a login page.
 
 ## Pages
 
 | Page | What it does |
 |---|---|
-| `login.html` | Log in or create an account. Blocks access to the rest of the app. |
+| `login.html` | Log in or create an account (username + password, no email). Blocks access to the rest of the app. |
 | `index.html` | Home page (requires login). |
 | `catalog.html` | Makeup product catalog with live search (requires login). |
-| `game.html` | GlamLab makeover game (being built from the V4 spec). |
+| `games.html` | Games hub (requires login). |
+| `shadematch.html` | Shade Match: pick the swatch identical to the target shade (requires login). |
+| `memory.html` | Match the Shade: 3-round memory card game, wrong pairs flip back over (requires login). |
 
 ## How login works
 

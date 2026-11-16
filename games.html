@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Games - GlamLab Studio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="brand">💄 GlamLab Studio</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="games.html" style="color:var(--accent)">Games</a>
+      <span id="authSlot"></span>
+    </div>
+  </nav>
+
+<main>
+  <h1>🎮 Makeup Games</h1>
+  <p class="sub">Test your makeup skills with our mini games!</p>
+  <div class="gamegrid">
+    <div class="gamecard">
+      <div class="big">🎨</div>
+      <h3>Shade Match</h3>
+      <p>A target shade appears. Pick the identical swatch from the lookalikes. Each round the shades get closer together. How sharp are your eyes?</p>
+      <a class="btn" href="shadematch.html">Play Shade Match</a>
+    </div>
+    <div class="gamecard">
+      <div class="big">🃏</div>
+      <h3>Match the Shade</h3>
+      <p>Flip makeup cards two at a time. Wrong pairs flip back over. 3 rounds, and each round gets harder: more cards and a faster flip-back!</p>
+      <a class="btn" href="memory.html">Play Match the Shade</a>
+    </div>
+  </div>
+</main>
+<script src="auth.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>
