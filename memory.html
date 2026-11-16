@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Match the Shade - GlamLab Studio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="brand">💄 GlamLab Studio</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="games.html" style="color:var(--accent)">Games</a>
+      <span id="authSlot"></span>
+    </div>
+  </nav>
+
+<main>
+  <h1>🃏 Match the Shade</h1>
+  <p class="sub">Flip two cards at a time. If they do not match, they flip back over. 3 rounds, and each round gets harder: more cards and a faster flip-back!</p>
+  <div style="text-align:center"><span class="roundbadge" id="roundBadge">Round 1 of 3</span></div>
+  <div class="memhud">
+    <div class="stat"><div class="v" id="moves">0</div><div class="l">Moves</div></div>
+    <div class="stat"><div class="v" id="pairs">0/8</div><div class="l">Pairs Found</div></div>
+    <div class="stat"><div class="v" id="timer">0s</div><div class="l">Time</div></div>
+  </div>
+  <div class="memgrid" id="memgrid"></div>
+  <div style="text-align:center;margin-top:16px">
+    <button class="btn secondary" onclick="newGame()">🔄 New Game</button>
+    <a class="btn secondary" style="margin-left:8px" href="games.html">← Games</a>
+  </div>
+  <div id="overlayHolder"></div>
+</main>
+<script src="auth.js"></script>
+<script src="memory.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>

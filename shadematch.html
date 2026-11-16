@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shade Match - GlamLab Studio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="brand">💄 GlamLab Studio</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="games.html" style="color:var(--accent)">Games</a>
+      <span id="authSlot"></span>
+    </div>
+  </nav>
+
+<main>
+  <h1>🎨 Shade Match</h1>
+  <p class="sub">Look at the target shade, then click the swatch that is the exact same color.</p>
+  <div class="scorebar">
+    <div class="stat"><div class="v" id="round">1</div><div class="l">Round</div></div>
+    <div class="stat"><div class="v" id="score">0</div><div class="l">Score</div></div>
+    <div class="stat"><div class="v" id="streak">0</div><div class="l">Streak</div></div>
+  </div>
+  <div class="shade-stage">
+    <p style="font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1px">Target Shade</p>
+    <div class="shade-target" id="target"></div>
+    <p id="feedback" class="sub" style="min-height:20px;margin:8px 0 0"></p>
+    <div class="shade-opts" id="opts"></div>
+    <button class="btn secondary" style="margin-top:18px" onclick="newRound()">Skip Round</button>
+    <a class="btn secondary" style="margin-top:18px;margin-left:8px" href="games.html">← Games</a>
+  </div>
+  <div id="overlayHolder"></div>
+</main>
+<script src="auth.js"></script>
+<script src="shadematch.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>
