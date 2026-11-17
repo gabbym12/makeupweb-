@@ -1,0 +1,8 @@
+.git/
+.local/
+.agents/
+.cache/
+.replit
+.replitignore
+README.md
+replit.md
