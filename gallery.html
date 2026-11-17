@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Look Gallery - GlamLab Studio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="brand">💄 GlamLab Studio</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="gallery.html" style="color:var(--accent)">Gallery</a>
+      <a href="tips.html">Tips</a>
+      <a href="games.html">Games</a>
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+      <span id="authSlot"></span>
+    </div>
+  </nav>
+
+<main>
+  <h1>📸 Look Gallery</h1>
+  <p class="sub">Featured looks in the carousel, then browse the full collection below. Click any look to jump to it in the carousel.</p>
+  <div class="carousel" id="carousel">
+    <div class="slides" id="slides"></div>
+    <button class="car-btn prev" onclick="moveSlide(-1)">‹</button>
+    <button class="car-btn next" onclick="moveSlide(1)">›</button>
+    <div class="car-dots" id="dots"></div>
+  </div>
+  <h2>All Looks</h2>
+  <p class="sub" style="margin-top:4px">Click a look to view it in the carousel.</p>
+  <div class="ggrid" id="ggrid"></div>
+</main>
+<script src="theme.js"></script>
+<script src="auth.js"></script>
+<script src="gallery.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>

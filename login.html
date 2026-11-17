@@ -12,6 +12,7 @@
     <div class="login-card">
       <h1>💄 GlamLab Studio</h1>
       <p class="sub" style="text-align:center">Log in to enter the studio and play!</p>
+      <div style="text-align:right"><button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button></div>
       <div class="tabs">
         <button type="button" id="tabLogin" class="active" onclick="setTab('login')">Log In</button>
         <button type="button" id="tabSignup" onclick="setTab('signup')">Sign Up</button>
@@ -32,6 +33,7 @@
     </div>
   </div>
 </main>
+<script src="theme.js"></script>
 <script src="auth.js"></script>
 <script>
 let mode = 'login';

@@ -12,20 +12,40 @@
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="catalog.html" style="color:var(--accent)">Catalog</a>
-      <a href="game.html">Game</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="tips.html">Tips</a>
+      <a href="games.html">Games</a>
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
       <span id="authSlot"></span>
     </div>
   </nav>
 
 <main>
   <h1>🛍️ Product Catalog</h1>
-  <p class="sub">Browse the full GlamLab makeup collection. Search products by keyword!</p>
+  <p class="sub">Search, filter, sort, rate, and favorite the full GlamLab makeup collection.</p>
   <div class="toolbar">
-    <input type="text" id="searchBar" placeholder="🔎 Search products... (try: lipstick, GlamCo, eyes, glow)" oninput="onSearch()" />
-    <span id="resultCount" class="sub"></span>
+    <input type="text" id="searchBar" placeholder="🔎 Search products... (try: lipstick, GlamCo, glow)" />
+    <select id="catFilter">
+      <option value="All">All Categories</option>
+      <option value="Lips">Lips</option>
+      <option value="Face">Face</option>
+      <option value="Eyes">Eyes</option>
+      <option value="Skin">Skin</option>
+      <option value="Tools">Tools</option>
+    </select>
+    <select id="sortSel">
+      <option value="az">Sort: A → Z</option>
+      <option value="za">Sort: Z → A</option>
+      <option value="price-asc">Sort: Price low → high</option>
+      <option value="price-desc">Sort: Price high → low</option>
+      <option value="newest">Sort: Newest</option>
+      <option value="rating">Sort: Top rated</option>
+    </select>
+    <label class="favfilter"><input type="checkbox" id="favOnly" /> 💖 Favorites only</label>
   </div>
   <div id="pgrid" class="pgrid"></div>
 </main>
+<script src="theme.js"></script>
 <script src="auth.js"></script>
 <script src="catalog.js"></script>
 <script>requireLogin();</script>

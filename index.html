@@ -12,7 +12,10 @@
     <div class="nav-links">
       <a href="index.html" style="color:var(--accent)">Home</a>
       <a href="catalog.html">Catalog</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="tips.html">Tips</a>
       <a href="games.html">Games</a>
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
       <span id="authSlot"></span>
     </div>
   </nav>
@@ -20,28 +23,49 @@
 <main>
   <div class="hero">
     <h1>💄 Welcome to GlamLab Studio</h1>
-    <p class="sub">Your makeup destination: browse the product catalog, meet our expert panel, and play makeup games!</p>
+    <p class="sub">Your makeup destination: browse the catalog, watch tutorials, meet our expert panel, and play makeup games!</p>
     <a class="btn" href="catalog.html">Browse Catalog</a>
     <a class="btn secondary" href="games.html" style="margin-left:8px">Play Games</a>
+    <a class="btn secondary" href="gallery.html" style="margin-left:8px">See Looks</a>
   </div>
+
+  <!-- Feature: Countdown Timer until the Winter Glam Launch -->
+  <div class="card" style="text-align:center;margin-bottom:24px">
+    <h3>⏳ Winter Glam Launch</h3>
+    <p class="sub" style="margin-bottom:0">Our new winter collection drops December 1, 2026!</p>
+    <div class="countdown" id="countdown"></div>
+  </div>
+
   <div class="cards">
     <div class="card">
       <h3>🛍️ Product Catalog</h3>
-      <p class="sub">Explore the makeup collection with live search.</p>
+      <p class="sub">Search, filter, sort, rate, and favorite the collection.</p>
       <a class="btn secondary" href="catalog.html">Open Catalog</a>
     </div>
     <div class="card">
+      <h3>📸 Look Gallery</h3>
+      <p class="sub">Browse featured looks in the carousel and full gallery.</p>
+      <a class="btn secondary" href="gallery.html">View Gallery</a>
+    </div>
+    <div class="card">
+      <h3>🎬 Tips & Videos</h3>
+      <p class="sub">Watch embedded tutorials on chemistry, SFX, and camera-ready makeup.</p>
+      <a class="btn secondary" href="tips.html">Watch Now</a>
+    </div>
+    <div class="card">
       <h3>🎮 Makeup Games</h3>
-      <p class="sub">Play Shade Match and Match the Shade, our makeup memory game.</p>
+      <p class="sub">Play Shade Match and Match the Shade.</p>
       <a class="btn secondary" href="games.html">Play Now</a>
     </div>
     <div class="card">
       <h3>🎓 Expert Panel</h3>
-      <p class="sub">Learn from five specialists in cosmetic chemistry, SFX, runway, HD camera prep, and stage FX.</p>
+      <p class="sub">Five specialists: cosmetic chemistry, SFX, runway, HD camera prep, and stage FX.</p>
     </div>
   </div>
 </main>
+<script src="theme.js"></script>
 <script src="auth.js"></script>
+<script src="countdown.js"></script>
 <script>requireLogin();</script>
 </body>
 </html>

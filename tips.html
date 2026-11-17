@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Makeup Tips & Videos - GlamLab Studio</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav class="nav">
+    <a href="index.html" class="brand">💄 GlamLab Studio</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="catalog.html">Catalog</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="tips.html" style="color:var(--accent)">Tips</a>
+      <a href="games.html">Games</a>
+      <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">🌙</button>
+      <span id="authSlot"></span>
+    </div>
+  </nav>
+
+<main>
+  <h1>🎬 Makeup Tips & Videos</h1>
+  <p class="sub">Watch tutorials from our expert panel topics. Swap in your favorite video IDs anytime!</p>
+
+  <div class="video-wrap">
+    <h3 style="margin-bottom:10px">🧪 Cosmetic Chemistry: What is really in your lipstick?</h3>
+    <!-- Embedded Video Player: replace the VIDEO_ID with any YouTube video you like -->
+    <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_1" title="Cosmetic chemistry video"
+      allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+
+  <div class="video-wrap">
+    <h3 style="margin-bottom:10px">🎭 SFX Basics: Blending prosthetic edges</h3>
+    <!-- Embedded Video Player: replace the VIDEO_ID with any YouTube video you like -->
+    <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_2" title="SFX video"
+      allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+
+  <div class="video-wrap">
+    <h3 style="margin-bottom:10px">📸 HD Camera Prep: Blur, prime, set</h3>
+    <!-- Embedded Video Player: replace the VIDEO_ID with any YouTube video you like -->
+    <iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID_3" title="HD camera prep video"
+      allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+</main>
+<script src="theme.js"></script>
+<script src="auth.js"></script>
+<script>requireLogin();</script>
+</body>
+</html>
